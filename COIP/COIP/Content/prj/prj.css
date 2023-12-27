@@ -1,0 +1,481 @@
+﻿body {
+    font-size: 14px;
+    --position-btn-size: 2rem;
+    --position-slect-font-size: 1em;
+}
+
+
+.navbar-brand img {
+    height: 28px;
+    margin-right: 4px;
+}
+
+@media (max-width: 400px) {
+    .navbar-brand{
+        font-size:1rem
+    }
+    .navbar-brand img {
+        height: 20px;
+    }
+}
+
+#basicdataDiv .meter .pinctrl, #disasterPreventionData .meter .pinctrl {
+    padding: 0;
+}
+#basicdataDiv .container, #disasterPreventionData .container {
+    margin-bottom: 6px;
+}
+/*#basicdataDiv .container > a, #disasterPreventionData .container > a {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 10px;
+}*/
+#basicdataDiv .container > .meter, #disasterPreventionData .container > .meter {
+    margin-left: 1em;
+}
+#basicdataDiv .container > a > *, #disasterPreventionData .container > a > * {
+    cursor: pointer !important;
+}
+#basicdataDiv .container > a .glyphicon, #disasterPreventionData .container > a .glyphicon {
+    transition: transform .2s ease-in;
+    transform: rotate( 90deg );
+}
+#basicdataDiv .container > a.collapsed .glyphicon, #disasterPreventionData .container > a.collapsed .glyphicon {
+    transform: rotate( 0deg );
+}
+
+.tribe-point + .googleContentFix, .tribe-polygon + .googleContentFix {
+    padding: 2px 8px;
+    /*max-height: 100px;*/
+}
+.pin_label.water_normal.tribe-polygon {
+    background-color: transparent !important;
+    fill: none !important;
+    color: green;
+}
+
+#positionDiv {
+    color: black;
+}
+#positionDiv .position-title {
+    font-size: 1.2em;
+    margin-bottom:4px;
+}
+#positionDiv .ctrl-container {
+    padding-left: 1em;
+    padding-right: .5em;
+    padding-bottom: 1em;
+}
+#positionDiv select, #positionDiv .bootstrap-select, #positionDiv .address-geocode .input-group > input, #positionDiv .wgs84Div input {
+    border-radius: 4px;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    width: calc( 100% - ( var(--position-btn-size)  ) ) !important;
+    font-size: var(--position-slect-font-size) !important;
+}
+#positionDiv .pinctrl .ctrl {
+    /*display:none !important;*/
+}
+#positionDiv .pinctrl .poly-style select {
+    border-radius: 0.2rem;
+    padding: 0 !important;
+}
+/*#positionDiv .address-geocode .input-group .input-group-addon{
+    padding:0 !important;
+}
+.address-geocode{
+    width:100%;
+}*/
+#positionDiv select.name-position-select {
+    display: none !important;
+    width: var(--position-btn-size);
+}
+#positionDiv .btn-cancel {
+    font-size: var(--position-slect-font-size);
+}
+#positionDiv .btn-position, #positionDiv .address-geocode .input-group .input-group-addon, #positionDiv .form-group.wgs84Div .btn {
+    width: var(--position-btn-size);
+}
+#positionDiv .address-geocode .input-group .input-group-addon {
+    padding: 0;
+    padding-top:4px;
+}
+#positionDiv .cancel-container {
+    text-align: end;
+    margin-top: .5em;
+    padding-right: .5em;
+    display: flex;
+    justify-content: flex-end;
+}
+#positionDiv .wgs84Div input, #positionDiv .twd97Div input {
+    width: calc( 50% - var(--position-btn-size)/2 - 6px ) !important;
+}
+#positionDiv .wgs84Div .btn, #positionDiv .twd97Div .btn {
+    padding: 7px 8px;
+}
+#positionDiv .ctrl-container .btn{
+    font-size:.875rem;
+}
+#positionDiv .form-group.twd97Div + .btn.pull-right {
+    display: none;
+}
+#positionDiv .form-group.wgs84Div > label, #positionDiv .form-group.twd97Div + .btn.pull-right {
+    /*display: none;*/
+}
+#positionDiv .form-group.twd97Div {
+    /*display: none;*/
+}
+.name-position-select .dropdown-toggle, .name-position-select .dropdown-menu, .name-position-select .form-control {
+    border: 1px gray solid;
+    font-size: var(--position-slect-font-size);
+}
+.btn.disabled {
+    cursor: no-drop;
+}
+#alertinfo{
+    max-height:360px;
+}
+#alertinfo table {
+    color: black;
+}
+#alertinfo table thead{
+    font-weight:bold;
+}
+#alertinfo .table-hover > tbody > tr.yellow {
+    color: yellow;
+    text-shadow: 0px 0px 2px #222;
+}
+#alertinfo .table-hover > tbody > tr.red {
+    color: red;
+    text-shadow: 0px 0px 2px #666;
+}
+#alertinfo .table-hover > tbody > tr {
+    cursor: pointer;
+}
+#alertinfo .table > :not(caption) > * > * {
+    padding: 0.2rem 0.2rem;
+}
+#alertinfo .table-hover > tbody > tr img {
+    width: 22px;
+}
+#alertinfo .table-hover > tbody > tr.yellow:hover {
+    color: yellow;
+    text-shadow: 1px 1px 2px #000;
+}
+#alertinfo .table-hover > tbody > tr.red:hover {
+    color: red;
+    text-shadow: 1px 1px 2px #666;
+}
+@media (max-width: 576px) {
+    .navbar-nav .dropdown-menu {
+        background-color: transparent;
+    }
+}
+
+.popu-ctrl-content .prop-link{
+    color:#fff;
+    padding: .2rem 0;
+    line-height:1.8;
+}
+.popu-ctrl-content .prop-link:hover {
+    color: #aaa;
+}
+.popu-ctrl-content a[aria-expanded] {
+    color: #eee;
+    font-size:1.2em;
+}
+.popu-ctrl-content a[aria-expanded]:hover {
+    color: #ddd !important;
+}
+/**********draw*********/
+#drawDiv.gisdrawtool .textimg {
+    content: "A";
+}
+
+#drawDiv.gisdrawtool .textimg:after {
+    content: "A";
+    position: absolute;
+    left: 16px;
+    font-size: 22px;
+    top: 2px;
+    color: white;
+    text-shadow: 0 0 2px red;
+}
+
+#drawDiv.gisdrawtool #draw-color-style-div lable {
+    color: #aaa !important;
+}
+
+.textIcon {
+    height: auto !important;
+}
+
+.draw-text-contanier {
+    background-color: rgba(255,255,255,.5);
+    border-radius: 4px;
+    border: 1px #aaa solid;
+    width: 100%;
+    height: 100%;
+    /*text-align:center;*/
+}
+
+.draw-text-contanier.display-label {
+    background-color: transparent !important;
+    display: inline-block;
+    border: none;
+}
+
+.draw-text-contanier label {
+    line-height: 28px;
+    font-size: 1.75em;
+    font-weight: bold;
+    text-shadow: 0 0 3px #aaa;
+    word-break: keep-all;
+}
+
+.draw-text-contanier .glyphicon-ok {
+    top: 0px;
+}
+
+.leaflet-interactive.textIcon-drawing {
+    display: none;
+}
+
+.leaflet-tooltip .draw-text-contanier label {
+    line-height: normal;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+/**********draw*********/
+
+/* jpPanel ggray ---------------------------------------------- */
+.jsPanel.jsPanel-theme-ggray {
+    background: #444;
+    box-shadow: 0 0 6px rgba(0, 33, 50, 0.1), 0 7px 25px rgba(17, 38, 60, 0.4);
+    /*box-shadow:--webkit*/
+    color: #ccc;
+    font-family: tahoma,arial,verdana,sans-serif;
+    font-weight: normal;
+}
+
+.jsPanel-hdr.jsPanel-theme-ggray {
+    color: #ccc !important;
+    height: auto; /*20140826*/
+    min-height: 32px;
+}
+
+.jsPanel-content-default.jsPanel-theme-ggray {
+    height: calc(100% - 32px); /*20140826*/
+}
+
+.jsPanel-content.jsPanel-theme-ggray {
+    background: #444;
+    /*background: none repeat scroll 0 0 #000;*/
+    color: #ccc !important;
+}
+
+.jsPanel-theme-ggray .popu-ctrl-content {
+    /*background-color:rgba(40,183,255,0.3);*/
+    background-color: rgba(255,255,255,.98);
+    /*color:#570947;*/
+}
+
+.jsPanel-theme-ggray .gisdrawtool {
+    color: #000 !important;
+}
+
+.jsPanel-theme-ggray .gisdrawtool hr {
+    border-color: rgba(0,0,0,0.3);
+}
+
+.jsPanel-theme-ggray .gisdrawtool .btn::before {
+    color: #444 !important;
+    font-weight: bold;
+}
+
+.jsPanel-theme-ggray .gisdrawtool .btn.work {
+    background-color: #444;
+}
+/* jpPanel ggray ---------------------------------------------- */
+
+
+
+.toggle-ctrl {
+    display: block;
+    margin-top: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.toggle-container .row {
+    /*margin: 0;*/
+    cursor: pointer;
+}
+.toggle-ctrl  .glyphicon {
+    transition: transform .2s ease-in;
+    transform: rotate( 90deg );
+}
+toggle-ctrl.collapsed .glyphicon {
+    transform: rotate( 0deg );
+}
+/*#legendDiv .legend{
+    display:flex;
+    align-items:center;
+}*/
+#legendDiv{
+    padding-top:1rem;
+    font-size:1rem;
+}
+#legendDiv .legend, #legendDiv .legend .legend-icon > span {
+    color: black;
+    font-size: 1rem !important;
+    /*padding-bottom:.4rem;*/
+}
+    #legendDiv .legend > * {
+        padding-bottom: 1.5rem;
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+#legendDiv .legend div.legend-icon { /*pin*/
+    padding-left: 30px;
+    height: 24px;
+    line-height:1.4;
+}
+#legendDiv .legend span.legend-icon { /*kml*/
+    padding-left: 0;
+    display: flex;
+    /*align-items: center;*/
+}
+#legendDiv .legend span.legend-icon > span { /*kml.name*/
+    padding-left: 4px;
+}
+
+
+.leaflet-marker-icon.marker-cluster.water_nodata > div:before {
+    content: "位";
+}
+.leaflet-marker-icon.marker-cluster.water_nodata {
+    background-color: rgba(179,136,133,.5);
+}
+
+.pin-tooltip-info {
+    position: absolute;
+    right: .2rem;
+    border: none;
+    background-color: transparent;
+    color:white;
+}
+
+
+.print-dom {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+}
+.leaflet-control-graphicscale.print-dom{
+    position:relative;
+}
+body.print .print-dom, .print-dom #legendDiv {
+    display: block !important;
+}
+.ompass {
+    left: 0;
+    top: 0;
+    height: 161px;
+    width: 124px;
+    background-image: url(../../images/legend/指北針.jpg);
+    background-size: cover;
+    background-size: contain;
+}
+.print-legend {
+    right: 0;
+    bottom: 40px;
+    background-color:white;
+}
+.leaflet-control-graphicscale .division {
+    background-color: white;
+}
+.leaflet-control-graphicscale .label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0px 2px white;
+}
+.print .leaflet-bottom.leaflet-control{
+    margin-bottom:2px;
+}
+.print .leaflet-control-graphicscale-inner{
+    margin-bottom:4px;
+    display:block;
+}
+.carousel-info-window-content{
+    
+}
+.carousel-info-window-content .carousel-inner, .leaflet-infowindow.set-max-height .googleContentFix {
+    padding: 0.3rem .5rem;
+    max-height: 240px;
+    overflow-y: auto;
+    white-space:initial;
+}
+.leaflet-tooltip-pane > .leaflet-tooltip-label > .pin_label {
+    white-space:nowrap;
+}
+
+.carousel-info-window-content .sr-only {
+    display: none;
+}
+/*.carousel-info-window-content .carousel-control:hover .glyphicon:before, .carousel-info-window-content .carousel-control .glyphicon:hover:before{
+    color:black;
+}*/
+.carousel-info-window-content .carousel-control {
+    width:1.2rem !important;
+    position:fixed;
+    top:.5rem;
+    bottom:auto;
+    z-index:999999;
+    color:white;
+}
+.carousel-info-window-content .carousel-control-prev{
+    padding-left:1rem;
+}
+.carousel-info-window-content .carousel-control-next{
+    padding-right:1rem;
+}
+.carousel-info-window-content .carousel-indicators  [data-bs-target]{
+    background-color:black;
+}
+.leaflet-infowindow-title.tribe-polygon > label {
+    position: absolute;
+    right: 2rem;
+    font-size: .8rem;
+    color: lightgray;
+    top: 0.8rem;
+}
+.layer-count-1 .carousel-info-window-content .carousel-indicators, .layer-count-1 .carousel-info-window-content .carousel-control,
+.layer-count-1 .leaflet-infowindow-title.tribe-polygon > label {
+    display: none;
+}
+.infowindow-仁愛村卡努颱風受災戶 .googleContentFix{
+    padding:.5rem;
+}
+
+/*說帖製作*/
+#documentMake{
+    display:none;
+}
+.jsPanel #documentMake {
+    display: block;
+}
+#documentMake > * {
+    display: block;
+    width: 100%;
+}
+#documentMake > label{
+   font-size:1.1rem;
+   font-weight:bold;
+}
+#documentMake > input, #documentMake > textarea {
+    margin-bottom: .4rem;
+}
+#documentMake > .btn{
+    margin-top:.2rem;
+}
